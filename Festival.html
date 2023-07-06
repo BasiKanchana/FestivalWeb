@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+        }
+        #myvedio {
+              position: relative;
+              right: 0;
+              bottom: 0;
+              min-width: 100%; 
+              min-height: 100%;
+        }
+        header {
+            height:50px ;
+            color:rgb(230, 31, 5) ;
+            line-height:50px ;
+            background-color:rgb(248, 226, 26) ;
+            padding-left:50px ;
+        }
+        nav {
+            height:760px;
+             width:100% ;
+          position: absolute;
+         padding:0px ;
+         margin:0px ;
+        top:50px ;
+       /* background-color: bisque;*/
+       
+
+        }
+        .nav-festivalLive {
+            width:30% ;
+            height:70px ;
+            float: left;
+            padding:20px ;
+            
+        }
+        .nav-menu {
+            padding:0px ;
+            margin:0px ;
+        }
+        .nav-menu ul li a {
+            width:10% ;
+            float: left;
+            padding:20px ;
+            font-size:25px ;
+           color:white ;
+          
+        }
+        .nav-menu ul li a:hover {
+            color:yellow ;
+        } 
+        
+        .music {
+            width:100%;
+            text-align: center;
+            position: absolute;
+            top: 160px;
+            color: rgb(110, 232, 248);;
+           font-size:35px ;
+          
+        }
+        article {
+            height:800px ;
+            background-color: black;
+            text-align: center;
+            padding:30px ;
+            color: aliceblue;
+        }
+         article  h1 button {
+              width:15% ;
+              height:30px ;
+              background-color: rgb(56, 53, 53);
+              color: rgb(237, 246, 250);
+        }
+        article button:hover {
+            background-color: aqua;
+            color: rgb(243, 220, 220);
+        }
+        .time-table {
+           /* width:100% ;
+            height:200px;*/
+             text-align: center;
+            /* color: rgb(243, 247, 250);*/
+            padding: 80px;
+            padding-left:320px ; 
+        }
+       td   a {
+            border:3px solid rgb(240, 23, 240) ;
+            height:50px ;
+            width:100%;
+            display: block;
+            color: aliceblue;
+            padding:10px ;
+        }
+        .BUY-TICKET {
+            height:620px ; 
+            background-color: rgb(36, 35, 35);
+            text-align: center;
+            color: aliceblue;
+            padding:30px ;
+        }
+        .card {
+            width:20% ;
+            height:350px ;
+           
+            float: left;
+            margin: 30px;
+        }
+        aside {
+            height:730px ;
+            background-color: rgb(10, 9, 9);
+            text-align: center;
+            padding:30px ;
+            color: aliceblue ;
+        }
+        .text-pic {
+            padding-left:170px ;
+        }
+        .pictures {
+             width:20% ;
+            height:380px ;
+           border:3px solid rgb(218, 206, 206) ;
+            float: left;
+            margin: 10px;
+        }
+        .background-image {
+          
+            height:400px ;
+            background-image:url(images/jack-slider-570d.jpg);
+            background-repeat: no-repeat;
+            width:100% ;
+            background-size: cover;
+             box-sizing: border-box;
+             position: relative;
+             opacity: 0.7;
+        }
+        .letest-blogs {
+            width:100% ;
+            height:1000px ;
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            padding-top:70px ;
+        }
+        .blogs {
+            padding:20px 280px ;
+            text-align: center;
+         
+        }
+        .box {
+            width:80% ;
+            height:140px ;
+          /*  border:2px solid rgba(245, 242, 242, 0.938) ;*/
+            text-align: justify;
+            margin:40px ;
+           padding:20px ;
+        }
+        .festival-img {
+            width:100% ;
+            height:540px ;
+            background-color: rgb(236, 161, 161);
+           display: flex;
+          
+        }
+        .images-left {
+            width:30% ;
+            height:60px ;
+           /* border:2px solid rgb(243, 235, 235) ;*/
+            float: left;
+        }
+        .images-center {
+            width:25% ;
+            height:100px;
+          /*  border:2px solid rgb(243, 235, 235) ;*/
+            float: left;
+        }
+        .image-right {
+            width:45% ;
+            height:540px;
+           /* border:2px solid rgb(243, 235, 235) ;*/
+            
+        }
+        .right-top {
+            width:100% ;
+            height:200px;
+            float: left;
+           /* border:2px solid rgb(34, 2, 2) ;*/
+        }
+        .right-bottom {
+            width:100% ;
+            height:340px;
+            float: left;
+           /* border:2px solid rgb(34, 2, 2) ;*/
+        }
+        footer {
+            height:700px ;
+            background-color: black;
+            color: rgb(85, 86, 87);
+           
+            padding:120px ;
+        }
+        .contact-me {
+            width:23% ;
+            height:500px ;
+           
+            float: left;
+        }
+        .intagram {
+            width:30% ;
+            height:500px ;
+           
+            float: left;
+            
+        }
+        .intagram-img {
+            margin:5px ;
+            width:30% ;
+            float: left;
+        }
+        
+        .newsletter {
+            width:24% ;
+            height:500px ;
+            
+            float: left;
+            color: rgb(85, 86, 87);
+        }
+        input[type=email] {
+            width:90% ;
+            height:40px ;
+            color: aliceblue;
+            background-color: rgb(70, 67, 67);
+            padding:10px ;
+            margin:15px;
+
+        }
+       
+    </style>
+</head>
+<body>
+   
+    <header>
+        <i class="fa-regular fa-user"></i>
+        <span style="color:black ;font-size:20px;"><strong>welcome to music Festival 2023</strong></span>
+    </header>
+    <h1>
+        <video muted
+               id="myvedio"
+               autoplay
+               loop
+               
+              >
+              <source src="vedios/celebration vedio.mp4" type="video/mp4" /></h1>
+     <nav>
+        <div class="nav-festivalLive">
+            <h1 style="color: aliceblue;">Festival Live</h1>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">artist</a></li>
+                <li><a href="">schedule</a></li>
+                <li><a href="">pricing</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+            <button style="margin:20px ;font-size:13px;border:3px solid black;border-radius:20px;padding: 6px;background-color: rgb(245, 128, 50);" >Buy Ticket</button>
+        </div>
+        <div class="music">
+            <h1>TURN ON THE  </h1>
+            <H1>FEELING WITH MUSIC</H1>
+            <br><br>
+            <button style="width:15%;height:35px;font-size:20px;background-color:transparent;color:rgb(250, 83, 161);border-radius:15px ;">Lets Play</button>
+        </div>
+    </nav>
+    <article>
+        <h1 style="color: rgb(252, 252, 253);font-size: 35px ;">UPCOMMING<span style="color: rgb(180, 17, 167);"> EVENT</span></h1><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p> Beatae veritatis porro nihil autem  molestias quae excepturi exercitationem provident!</p><br><br>
+      <h1>  <button>DAY 1</button><button>DAY 2</button><button>DAY 3</button><button>DAY 4</button></h1><br><br><br>
+        <p style="color: rgb(216, 24, 174);";>JUNE 26</p>
+        <div class="time-table">
+            <table  style="border-color: antiquewhite;" cellspacing="30" cellpadding="10"  >
+                <tr>
+                    <td><a href="">2:00PM-4:00PM</a></td>
+                    <td><p style="color:rgb(27, 187, 250);">A BREIF HISTORY OF CRATION</p><br>
+                         <P><i class="fa-solid fa-user"></i>  
+                       <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </span> </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur</p></td>
+                </tr>
+                <tr>
+                    <td><a href="">2:00PM-4:00PM</a></td>
+                    <td><p  style="color:rgb(27, 187, 250);">A BREIF HISTORY OF CRATION</p><br>
+                         <P><i class="fa-solid fa-user"></i>  
+                       <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </span> </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur</p></td>
+                </tr>
+                <tr>
+                    <td><a href="">2:00PM-4:00PM</a></td>
+                    <td><p  style="color:rgb(27, 187, 250);">A BREIF HISTORY OF CRATION</p><br>
+                         <P><i class="fa-solid fa-user"></i>  
+                       <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </span> </P>
+                    <p>Lorem ipsum dolor sit, amet consectetur</p></td>
+                </tr>
+            </table>
+        </div>
+    </article>
+    <section>
+        <div class="BUY-TICKET">
+        <h1 style="font-size:35px ;">BUY    <span style="color:rgb(212, 14, 238);" >TICKET</span></h1><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p> Fugiat, ut sequi autem et minima hic enim veritatis nisi recusandae atque alias unde, magni blanditiis sint quod, placeat cum. Iure, quidem!</p><br><br><br>
+        <div class="card-buyticket">
+            <div class="card">
+                <h1 style=" font-size:30px ;">FREE</h1><br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p><br>
+                <P>ipsum dolor sit amet consectetur</P><br><br>
+                <P style="color: rgb(248, 12, 197);font-size:35px ;">$00</P><br><br>
+                <button style="font-size:20px ;background-color:rgb(87, 225, 243) ;color: aliceblue;padding:7px ;border:3px solid rgba(236, 231, 231, 0) ;border-radius:20px ;">BUY TICKET</button>
+            </div>
+            <div class="card">
+                <h1 style=" font-size:30px ;">SILVER</h1><br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p><br>
+                <P>ipsum dolor sit amet consectetur</P><br><br>
+                <P style="color: rgb(248, 12, 197);font-size:35px ;">$59</P><br><br>
+                <button style="font-size:20px ;background-color:rgb(87, 225, 243) ;color: aliceblue;padding:7px ;border:3px solid rgba(236, 231, 231, 0) ;border-radius:20px ;">BUY TICKET</button>
+            </div>
+            <div class="card">
+                <h1 style=" font-size:30px ;">GOLD</h1><br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p><br>
+                <P>ipsum dolor sit amet consectetur</P><br><br>
+                <P style="color: rgb(248, 12, 197);font-size:35px ;">$69</P><br><br>
+                <button style="font-size:20px ;background-color:rgb(87, 225, 243) ;color: aliceblue;padding:7px ;border:3px solid rgba(236, 231, 231, 0) ;border-radius:20px ;">BUY TICKET</button>
+                </div>
+                <div class="card">
+                    <h1 style=" font-size:30px ;">VIP</h1><br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p><br>
+                    <P>ipsum dolor sit amet consectetur</P><br><br>
+                    <P style="color: rgb(248, 12, 197);font-size:35px ;">$99</P><br><br>
+                    <button style="font-size:20px ;background-color:rgb(87, 225, 243) ;color: aliceblue;padding:7px ;border:3px solid rgba(236, 231, 231, 0) ;border-radius:20px ;">BUY TICKET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <aside>
+     
+        <h1 style="font-size:35px ;">FUTURED  <span style="color:rgb(212, 14, 238);" >ARTIST</span></h1><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p> Fugiat, ut sequi autem et minima hic enim veritatis nisi recusandae atque alias unde, magni blanditiis sint quod, placeat cum. Iure, quidem!</p><br><br><br>
+        <div class="text-pic">
+            <div class="pictures">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, officiis incidunt tempore dolorum magnam maiores. Culpa maxime, aspernatur, velit esse laudantium hic deserunt, quo delectus ab ex atque non placeat.</p>
+                <br><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, pariatur. Asperiores voluptatibus nostrum illo placeat sequi excepturi, dolorum iste maiores suscipit saepe blanditiis amet aliquid porro.</p>
+
+            </div>
+            <div>
+            <div class="pictures">
+                <img src="images/girl-singng.jfif" width="100%" height="374px" alt="">
+            </div>
+            <div class="pictures">
+                <img src="images/singing.jfif" width="100%" height="374px" alt="">
+            </div>
+            <div class="pictures">
+                <img src="images/gitar-boy.jfif" width="100%" height="374px" alt="">
+            </div>
+        </div>
+        </div>
+     
+           
+          
+
+    </aside>
+    <section>
+    <div>
+     <div class="background-image">
+        <h1 style="text-align: center;color:white ;font-size:35px ;padding-top:70px ;">FOLLOW<span style="color: rgb(252, 57, 219);"> STEVE  AOKI</span> FESTIVAL <span style="color: rgb(252, 57, 219);">FACEBOOK</span></h1><br>
+        <p style="text-align: center;color: rgb(12, 7, 7);font-size:22px ;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p><br>
+       <h1> <button  style="text-align: center;width:15% ;height:30px ;margin-left:560px ;border: 3px solid rgb(10, 150, 231);color: aliceblue;background-color: rgb(19, 137, 247);border-radius:15px; ">FACEBOOK</button></h1>
+    
+    </div>
+</div>
+</section>
+<section>
+    <div class="letest-blogs">
+        <h1 style="font-size:35px ;">LATEST <span style="color:rgb(212, 14, 238);" >BLOGS</span></h1><br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, optio animi delectus. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <div class="blogs">
+           <div class="box" style="background-color: rgb(46, 43, 43)";>
+             <p style="color: rgb(41, 243, 226);margin:5px ;">29 MOTIVATIONAL QUORTS FOR BUSINESS AND OTHER WORK ENVIRONMENT</p>
+             <div style="margin:5px ;">
+               <i class="fa-solid fa-calendar-days"> </i>  29 NOV 2006<span style="margin-left:40px ;">
+                  <i class="fa-solid fa-user"></i></span>     Lorem ipsum
+            </div>
+           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis inventore. </p>
+           </div>
+           <div class="box">
+            <p style="color: rgb(41, 243, 226);margin:5px ;">29 MOTIVATIONAL QUORTS FOR BUSINESS AND OTHER WORK ENVIRONMENT</p>
+            <div style="margin:5px ;">
+              <i class="fa-solid fa-calendar-days"> </i>  29 NOV 2006<span style="margin-left:40px ;">
+                 <i class="fa-solid fa-user"></i></span>     Lorem ipsum
+           </div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis inventore. </p>
+          </div>
+          <div class="box" style="background-image:url(images/holi-music.jfif) ;opacity:0.3 ;">
+            <p style="color: rgb(41, 243, 226);margin:5px ;">29 MOTIVATIONAL QUORTS FOR BUSINESS AND OTHER WORK ENVIRONMENT</p>
+            <div style="margin:5px ;">
+              <i class="fa-solid fa-calendar-days"> </i>  29 NOV 2006<span style="margin-left:40px ;">
+                 <i class="fa-solid fa-user"></i></span>     Lorem ipsum
+           </div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis inventore. </p>
+          </div>
+          <div class="box">
+            <p style="color: rgb(41, 243, 226);margin:5px ;">29 MOTIVATIONAL QUORTS FOR BUSINESS AND OTHER WORK ENVIRONMENT</p>
+            <div style="margin:5px ;">
+              <i class="fa-solid fa-calendar-days"> </i>  29 NOV 2006<span style="margin-left:40px ;">
+                 <i class="fa-solid fa-user"></i></span>     Lorem ipsum
+           </div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio omnis inventore. </p>
+          </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="festival-img">
+        <div class="images-left">
+            <img src="images/singing poster.jfif" width="100%" height="175px"   alt="">
+            
+            <img src="images/holi-3.jfif"  width="100%" height="175px"  alt="">
+            <img src="images/music-3.jfif"  width="100%" height="175px"  alt="">
+
+        </div>
+        <div class="images-center">
+            <img src="images/holi-2"width="100%" height="350px" alt="">
+            <img src="images/singing.jfif"width="100%" height="180px" alt="">
+
+        </div>
+        <div class="image-right">
+            <div class="right-top">
+                <img src="images/holi-6.jfif"  width="45%"  height="196px" alt="">
+                <img src="images/holi-7.jfif"  width="54%"  height="196px" alt="">
+            </div>
+            <div class="right-bottom">
+                <img src="images/holi-5.jfif"  width="100%"  height="338px"  alt="">
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <div class="contact-me">
+            <p style="color: rgb(9, 156, 156);text-align: center;padding:5px ;">CONTACT ME</p>
+            <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium inventore tempora deserunt saepe. Nam dolorem nisi eos consequuntur deleniti dolores explicabo ullam doloremque, aliquam nulla dolor voluptas est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laudantium inventore tempora.</p>
+
+        </div>
+        <div class="contact-me">
+            <p style="color: rgb(9, 156, 156);text-align: center;padding:5px ;">TWEETED</p>
+               <div class="tweted" style="padding:20px; padding-top:1px  ;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia fugit ea dicta illum voluptates nostrum, vitae veniam optio, </p>
+                <p style="margin:10px;color: rgb(11, 134, 134);"> <i class="fa-brands fa-twitter"></i>   <span style="color: rgb(9, 155, 155);margin-left:10px ;">Period on 17 MAY</span></p>
+            </div>
+            <div class="tweted "  style="padding:20px ;padding-top:1px ;" >
+               
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia fugit ea dicta illum voluptates nostrum, vitae veniam optio,</p>
+                <p style="margin:10px;color: rgb(11, 134, 134);"> <i class="fa-brands fa-twitter"></i>   <span style="color: rgb(9, 155, 155);margin-left:10px ;">Period on 17 MAY</span></p>
+            </div>
+            <div class="tweted"  style="padding:20px ;padding-top:10px ;padding-top:1px ;" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia fugit ea dicta illum voluptates nostrum, vitae veniam optio,</p>
+                <p style="margin:10px;color: rgb(11, 134, 134);"> <i class="fa-brands fa-twitter"></i>   <span style="color: rgb(9, 155, 155);margin-left:10px ;">Period on 17 MAY</span></p>
+            </div>
+           
+
+        </div>
+             <div class="intagram">
+                <div class="intagram-img">
+                <img src="images/holi-music.jfif" width="100%" height="100px" alt="">
+            </div>
+                <div class="intagram-img">
+                <img src="images/holi-2" width="100%" height="100px" alt="">
+            </div>
+            <div class="intagram-img">
+                <img src="images/holi-5.jfif" width="100%" height="100px" alt="">
+            </div>
+            <div class="intagram-img">
+                <img src="images/holi-3.jfif" width="100%" height="100px" alt="">
+            </div>
+        <div class="intagram-img">
+                <img src="images/holi-6.jfif" width="100%" height="100px" alt="">
+            </div>
+            <div class="intagram-img">
+                <img src="images/holi-7.jfif" width="100%" height="100px" alt="">
+                </div>
+
+
+              </div>
+           <div class="newsletter">
+            <h4  style="color: rgb(9, 156, 156);text-align: center;padding:5px ;">NEWS LETTER</h4>
+            <p style="padding:20px ;">connect with me and learning true!</p>
+            <label for="mail"></label>
+            <input type="email" name="email" placeholder="Enter Your mail" id="mail" required/>
+            <button style="padding:5px;margin:30px;width:70%;height:50px;font-size:25px;color:azure;background-color: aqua;border:5px solid rgb(89, 241, 252) ;border-radius:25px ;">Subcribe</button>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
